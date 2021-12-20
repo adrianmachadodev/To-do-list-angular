@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="input-group mb-3">
+    <input
+      [(ngModel)]="addTask"
+      type="text"
+      class="form-control"
+      placeholder="Recipient's username"
+      aria-label="Recipient's username"
+      aria-describedby="button-addon2"
+    />
+    <button
+      (click)="addTaskList()"
+      class="btn btn-outline-secondary"
+      type="button"
+      id="button-addon2"
+    >
+      Button
+    </button>
+  </div>
+  <table class="table text-center">
+    <thead>
+      <tr>
+        <th scope="col">Task</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of item">
+        <td>{{ i }}</td>
+        <td>
+          <button type="button" class="btn btn-outline-danger">Danger</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
