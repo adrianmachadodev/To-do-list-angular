@@ -23,4 +23,8 @@ export class ToDoBodyComponent implements OnInit {
       this.addTask = '';
     }
   }
+
+  deleteTask(index: any) {
+    this.item.splice(index, 1);
+  }
 }

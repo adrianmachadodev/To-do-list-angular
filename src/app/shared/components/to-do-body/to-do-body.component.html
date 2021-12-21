@@ -4,7 +4,7 @@
       [(ngModel)]="addTask"
       type="text"
       class="form-control"
-      placeholder="Recipient's username"
+      placeholder="Add Task"
       aria-label="Recipient's username"
       aria-describedby="button-addon2"
     />
@@ -25,10 +25,17 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let i of item">
+      <tr *ngFor="let i of item; let index = index">
         <td>{{ i }}</td>
         <td>
-          <button type="button" class="btn btn-outline-danger">Danger</button>
+          <button
+            (click)="deleteTask(index)"
+            value="Delete"
+            type="button"
+            class="btn btn-outline-danger"
+          >
+            Danger
+          </button>
         </td>
       </tr>
     </tbody>
